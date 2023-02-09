@@ -1,0 +1,24 @@
+{
+  "ts-node": {
+    "files": true
+  },
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "target": "es2017",
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "src": ["./src"]
+    },
+    "incremental": true,
+    "esModuleInterop": true,
+    "typeRoots": ["node_modules/@types", "typings"]
+  }
+}
