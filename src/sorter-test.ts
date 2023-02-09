@@ -1,4 +1,4 @@
-import { Sorter } from "./Sorter";
+import { Sorter } from "./sorter";
 
 const testArr = [2, 45, 2, 39, 7, 1, 97, 21, 3, 7];
 
