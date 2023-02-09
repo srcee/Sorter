@@ -1,27 +1,29 @@
-import { BubbleSort } from "./BubbleSort";
-import { MergeSort } from "./MergeSort";
-import { QuickSort } from "./QuickSort";
+import { QuickSort } from "./quickSort";
+import { BubbleSort } from "./bubbleSort";
+import { MergeSort } from "./mergeSort";
 
 export class Sorter {
   static bubbleSort(arr: number[]) {
     const sorter = new BubbleSort();
-    sorter.sort(arr);
+
+    return sorter.sort([...arr]);
   }
 
   static quickSort(arr: number[]) {
     const sorter = new QuickSort();
-    const sortedArr = sorter.sort(arr);
 
-    return sortedArr;
+    return sorter.sort([...arr]);
   }
 
   static quickSortInPlace(arr: number[]) {
     const sorter = new QuickSort();
-    sorter.sortInPlace(arr);
+
+    return sorter.sortInPlace([...arr]);
   }
 
   static mergeSort(arr: number[]) {
     const sorter = new MergeSort();
-    sorter.sort(arr);
+
+    return sorter.sort([...arr]);
   }
 }

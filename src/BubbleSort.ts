@@ -1,6 +1,6 @@
 export class BubbleSort {
   sort(arr: number[]) {
-    let isSorted: boolean;
+    let isSorted: boolean = false;
     let j = arr.length - 1;
     while (j > 0 && !isSorted) {
       isSorted = true;
@@ -15,6 +15,8 @@ export class BubbleSort {
       }
       j--;
     }
+
+    return arr;
   }
 
   private swap(arr: number[], i: number, j: number) {

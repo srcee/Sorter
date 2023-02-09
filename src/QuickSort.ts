@@ -16,12 +16,18 @@ export class QuickSort {
     return [...this.sort(left), pivot, ...this.sort(right)];
   }
 
-  sortInPlace(arr: number[], left: number = 0, right: number = arr.length - 1) {
-    if (left >= right) return;
+  sortInPlace(
+    arr: number[],
+    left: number = 0,
+    right: number = arr.length - 1
+  ): number[] | undefined {
+    if (left < right) {
+      const pivotIndex = this.partition(arr, left, right);
+      this.sortInPlace(arr, left, pivotIndex - 1);
+      this.sortInPlace(arr, pivotIndex + 1, right);
+    }
 
-    const pivotIndex = this.partition(arr, left, right);
-    this.sortInPlace(arr, left, pivotIndex - 1);
-    this.sortInPlace(arr, pivotIndex + 1, right);
+    return arr;
   }
 
   private partition(arr: number[], left: number, right: number): number {
